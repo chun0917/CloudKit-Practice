@@ -9,14 +9,17 @@
 /* Begin PBXBuildFile section */
 		74DEEB1E28D843AB002581B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DEEB1D28D843AB002581B3 /* AppDelegate.swift */; };
 		74DEEB2028D843AB002581B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DEEB1F28D843AB002581B3 /* SceneDelegate.swift */; };
-		74DEEB2228D843AB002581B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DEEB2128D843AB002581B3 /* ViewController.swift */; };
-		74DEEB2528D843AB002581B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DEEB2328D843AB002581B3 /* Main.storyboard */; };
 		74DEEB2728D843AB002581B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74DEEB2628D843AB002581B3 /* Assets.xcassets */; };
 		74DEEB2A28D843AB002581B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DEEB2828D843AB002581B3 /* LaunchScreen.storyboard */; };
 		74DEEB3528D843AC002581B3 /* CloudKit_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DEEB3428D843AC002581B3 /* CloudKit_PracticeTests.swift */; };
 		74DEEB3F28D843AC002581B3 /* CloudKit_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DEEB3E28D843AC002581B3 /* CloudKit_PracticeUITests.swift */; };
 		74DEEB4128D843AC002581B3 /* CloudKit_PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DEEB4028D843AC002581B3 /* CloudKit_PracticeUITestsLaunchTests.swift */; };
 		74DEEB5028D843DD002581B3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DEEB4F28D843DD002581B3 /* CloudKit.framework */; };
+		74DEEB5D28DD7FE6002581B3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DEEB5B28DD7FE6002581B3 /* MainVC.swift */; };
+		74DEEB5E28DD7FE6002581B3 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74DEEB5C28DD7FE6002581B3 /* MainVC.xib */; };
+		74DEEB6228DDA3A5002581B3 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DEEB6028DDA3A5002581B3 /* NameTableViewCell.swift */; };
+		74DEEB6328DDA3A5002581B3 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74DEEB6128DDA3A5002581B3 /* NameTableViewCell.xib */; };
+		74DEEB6528DDBA3F002581B3 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DEEB6428DDBA3F002581B3 /* People.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +43,6 @@
 		74DEEB1A28D843AB002581B3 /* CloudKit-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CloudKit-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DEEB1D28D843AB002581B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DEEB1F28D843AB002581B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		74DEEB2128D843AB002581B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		74DEEB2428D843AB002581B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74DEEB2628D843AB002581B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74DEEB2928D843AB002581B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74DEEB2B28D843AB002581B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +53,11 @@
 		74DEEB4028D843AC002581B3 /* CloudKit_PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKit_PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		74DEEB4D28D843D5002581B3 /* CloudKit-Practice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CloudKit-Practice.entitlements"; sourceTree = "<group>"; };
 		74DEEB4F28D843DD002581B3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		74DEEB5B28DD7FE6002581B3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		74DEEB5C28DD7FE6002581B3 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		74DEEB6028DDA3A5002581B3 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		74DEEB6128DDA3A5002581B3 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
+		74DEEB6428DDBA3F002581B3 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +110,10 @@
 		74DEEB1C28D843AB002581B3 /* CloudKit-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				74DEEB5F28DDA386002581B3 /* MainVC */,
 				74DEEB4D28D843D5002581B3 /* CloudKit-Practice.entitlements */,
 				74DEEB1D28D843AB002581B3 /* AppDelegate.swift */,
 				74DEEB1F28D843AB002581B3 /* SceneDelegate.swift */,
-				74DEEB2128D843AB002581B3 /* ViewController.swift */,
-				74DEEB2328D843AB002581B3 /* Main.storyboard */,
 				74DEEB2628D843AB002581B3 /* Assets.xcassets */,
 				74DEEB2828D843AB002581B3 /* LaunchScreen.storyboard */,
 				74DEEB2B28D843AB002581B3 /* Info.plist */,
@@ -139,6 +144,18 @@
 				74DEEB4F28D843DD002581B3 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74DEEB5F28DDA386002581B3 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				74DEEB5B28DD7FE6002581B3 /* MainVC.swift */,
+				74DEEB5C28DD7FE6002581B3 /* MainVC.xib */,
+				74DEEB6028DDA3A5002581B3 /* NameTableViewCell.swift */,
+				74DEEB6128DDA3A5002581B3 /* NameTableViewCell.xib */,
+				74DEEB6428DDBA3F002581B3 /* People.swift */,
+			);
+			path = MainVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +262,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74DEEB5E28DD7FE6002581B3 /* MainVC.xib in Resources */,
 				74DEEB2A28D843AB002581B3 /* LaunchScreen.storyboard in Resources */,
+				74DEEB6328DDA3A5002581B3 /* NameTableViewCell.xib in Resources */,
 				74DEEB2728D843AB002581B3 /* Assets.xcassets in Resources */,
-				74DEEB2528D843AB002581B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74DEEB2228D843AB002581B3 /* ViewController.swift in Sources */,
 				74DEEB1E28D843AB002581B3 /* AppDelegate.swift in Sources */,
+				74DEEB5D28DD7FE6002581B3 /* MainVC.swift in Sources */,
+				74DEEB6228DDA3A5002581B3 /* NameTableViewCell.swift in Sources */,
 				74DEEB2028D843AB002581B3 /* SceneDelegate.swift in Sources */,
+				74DEEB6528DDBA3F002581B3 /* People.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +331,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		74DEEB2328D843AB002581B3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				74DEEB2428D843AB002581B3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		74DEEB2828D843AB002581B3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -457,9 +469,9 @@
 				DEVELOPMENT_TEAM = S8FBP4YLUA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CloudKit-Practice/Info.plist";
+				INFOPLIST_KEY_NSMainNibFile = MainVC;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,9 +498,9 @@
 				DEVELOPMENT_TEAM = S8FBP4YLUA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CloudKit-Practice/Info.plist";
+				INFOPLIST_KEY_NSMainNibFile = MainVC;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
