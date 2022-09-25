@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,19 +27,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkG-7F-Aud">
+                        <rect key="frame" x="233" y="6.5" width="67" height="31"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Ttg-j3-qIw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="AC5-as-fra"/>
+                    <constraint firstAttribute="trailing" secondItem="CkG-7F-Aud" secondAttribute="trailing" constant="20" id="h1Y-bx-kiQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <constraints>
                 <constraint firstItem="Ttg-j3-qIw" firstAttribute="centerY" secondItem="njF-e1-oar" secondAttribute="centerY" id="o3N-LT-Yz7"/>
+                <constraint firstItem="CkG-7F-Aud" firstAttribute="centerY" secondItem="njF-e1-oar" secondAttribute="centerY" id="q2t-Ua-xAT"/>
             </constraints>
             <connections>
+                <outlet property="moreButton" destination="CkG-7F-Aud" id="x48-wK-skB"/>
                 <outlet property="nameLabel" destination="Ttg-j3-qIw" id="4wT-p6-ouj"/>
             </connections>
             <point key="canvasLocation" x="139" y="47"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

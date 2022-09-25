@@ -35,6 +35,17 @@ class MainVC: UIViewController {
         nameTableView.register(nib, forCellReuseIdentifier: "NameTableViewCell")
     }
     
+    func showAlert(){
+        let alert = UIAlertController(title: "修改", message: "修改", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "確認", style: .default) { action in
+            print("確認修改")
+        }
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: false, completion: nil)
+    }
+    
     func fetchItem(){
         var nameArray = [People]()
         let query = CKQuery(recordType: "People", predicate: NSPredicate(value: true))
@@ -57,6 +68,17 @@ class MainVC: UIViewController {
                 }
             case .failure(let error):
                 print(error)
+            }
+        }
+    }
+    
+    func deleteItem(_ recordID : CKRecord.ID){
+        database.delete(withRecordID: recordID) { deleteID, error in
+            if let error = error{
+                print(error)
+            }else{
+                print("刪除成功")
+                self.fetchItem()
             }
         }
     }
@@ -93,7 +115,22 @@ extension MainVC : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NameTableViewCell",for: indexPath) as! NameTableViewCell
         cell.nameLabel.text = nameArray[indexPath.row].name
+        cell.index = indexPath.row
+        cell.delegate = self
         return cell
+    }
+}
+extension MainVC : NameTableViewCellListener{
+    func buttonClicked(buttonType: String, index: Int) {
+        switch buttonType{
+        case "edit":
+            self.showAlert()
+        case "delete":
+            print(index,nameArray[index].recordID!)
+            self.deleteItem(nameArray[index].recordID!)
+        default:
+            break
+        }
     }
     
     
