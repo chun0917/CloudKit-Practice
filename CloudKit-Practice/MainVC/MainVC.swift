@@ -35,16 +35,20 @@ class MainVC: UIViewController {
         nameTableView.register(nib, forCellReuseIdentifier: "NameTableViewCell")
     }
     
-    func showAlert(){
-        let alert = UIAlertController(title: "修改", message: "修改", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "確認", style: .default) { action in
-            print("確認修改")
-        }
-        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        alert.addAction(okAction)
-        alert.addAction(cancelAction)
-        self.present(alert, animated: false, completion: nil)
-    }
+//    func showAlert(){
+//        let alert = UIAlertController(title: "修改", message: "", preferredStyle: .alert)
+//        alert.addTextField { textField in
+//            textField.placeholder = "Name"
+//        }
+//        let okAction = UIAlertAction(title: "確認", style: .default) { action in
+//            print("修改成功")
+//            self.updateItem(index: index, value: alert.textFields[0].text)
+//        }
+//        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+//        alert.addAction(okAction)
+//        alert.addAction(cancelAction)
+//        self.present(alert, animated: false, completion: nil)
+//    }
     
     func fetchItem(){
         var nameArray = [People]()
@@ -79,6 +83,24 @@ class MainVC: UIViewController {
             }else{
                 print("刪除成功")
                 self.fetchItem()
+            }
+        }
+    }
+    
+    func updateItem(index: Int, value: String){
+        database.fetch(withRecordID: nameArray[index].recordID!) { record, error in
+            if record != nil && error == nil{
+                record?.setValue(value, forKey: "name")
+                self.database.save(record!) { [weak self] record, error in
+                    if record != nil && error == nil{
+                        print("修改成功")
+                        self?.fetchItem()
+                    }else{
+                        print(error)
+                    }
+                }
+            }else{
+                print(error)
             }
         }
     }
@@ -124,7 +146,17 @@ extension MainVC : NameTableViewCellListener{
     func buttonClicked(buttonType: String, index: Int) {
         switch buttonType{
         case "edit":
-            self.showAlert()
+            let alert = UIAlertController(title: "修改", message: "", preferredStyle: .alert)
+            alert.addTextField { textField in
+                textField.placeholder = "Name"
+            }
+            let okAction = UIAlertAction(title: "確認", style: .default) { action in
+                self.updateItem(index: index, value: alert.textFields![0].text!)
+            }
+            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            alert.addAction(okAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: false, completion: nil)
         case "delete":
             print(index,nameArray[index].recordID!)
             self.deleteItem(nameArray[index].recordID!)
