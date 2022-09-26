@@ -35,21 +35,7 @@ class MainVC: UIViewController {
         nameTableView.register(nib, forCellReuseIdentifier: "NameTableViewCell")
     }
     
-//    func showAlert(){
-//        let alert = UIAlertController(title: "修改", message: "", preferredStyle: .alert)
-//        alert.addTextField { textField in
-//            textField.placeholder = "Name"
-//        }
-//        let okAction = UIAlertAction(title: "確認", style: .default) { action in
-//            print("修改成功")
-//            self.updateItem(index: index, value: alert.textFields[0].text)
-//        }
-//        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-//        alert.addAction(okAction)
-//        alert.addAction(cancelAction)
-//        self.present(alert, animated: false, completion: nil)
-//    }
-    
+    //撈CloudKit資料
     func fetchItem(){
         var nameArray = [People]()
         let query = CKQuery(recordType: "People", predicate: NSPredicate(value: true))
@@ -76,6 +62,7 @@ class MainVC: UIViewController {
         }
     }
     
+    //刪除資料
     func deleteItem(_ recordID : CKRecord.ID){
         database.delete(withRecordID: recordID) { deleteID, error in
             if let error = error{
@@ -87,6 +74,7 @@ class MainVC: UIViewController {
         }
     }
     
+    //修改資料
     func updateItem(index: Int, value: String){
         database.fetch(withRecordID: nameArray[index].recordID!) { record, error in
             if record != nil && error == nil{
@@ -105,6 +93,7 @@ class MainVC: UIViewController {
         }
     }
     
+    //新增資料
     @IBAction func addItem(_ sender: Any) {
         let record = CKRecord(recordType: "People")
         record.setValue(nameTextField.text!, forKey: "name")
