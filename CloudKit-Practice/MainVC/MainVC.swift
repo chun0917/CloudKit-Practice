@@ -39,6 +39,7 @@ class MainVC: UIViewController {
     func fetchItem(){
         var nameArray = [People]()
         let query = CKQuery(recordType: "People", predicate: NSPredicate(value: true))
+        query.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         database.fetch(withQuery: query) { result in
             switch result{
             case .success(let result):
@@ -114,7 +115,13 @@ class MainVC: UIViewController {
         }
     }
     @IBAction func searchItem(_ sender: Any) {
-        
+        nameArray = nameArray.filter {
+            $0.name!.contains(nameTextField.text!.lowercased()) || $0.name!.contains(nameTextField.text!.uppercased())
+        }
+        if nameTextField.text == ""{
+            fetchItem()
+        }
+        nameTableView.reloadData()
     }
     
 }
